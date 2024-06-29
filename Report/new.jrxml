@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="new" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="df899150-bd21-4042-b9b9-99a0672cff43">
+	<parameter name="total" class="java.lang.Double"/>
+	<parameter name="discount" class="java.lang.Double"/>
+	<parameter name="payment" class="java.lang.Double"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="code" class="java.lang.Integer"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="qty" class="java.lang.Integer"/>
+	<field name="price" class="java.lang.Double"/>
+	<field name="amount" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement x="271" y="15" width="139" height="35" uuid="50ff235c-29df-4502-b42d-c207558739b9"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[STAR Resturant]]></text>
+			</staticText>
+			<image>
+				<reportElement x="100" y="15" width="50" height="50" uuid="80b2b527-c851-4175-90c3-4bf10e353c53"/>
+				<imageExpression><![CDATA["D:/Etec/Java/Project/Report/maxresdefault.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="130" height="30" uuid="1915f402-560b-4081-87e4-bca07d0a9c00"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[#719A/512B, Toul Kork ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="160" height="30" uuid="28fe1494-9c10-4e72-8702-ace48a322344"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Tel : 011 2222 3333]]></text>
+			</staticText>
+			<textField pattern="dd,MMMMM, yyyy">
+				<reportElement x="380" y="0" width="165" height="30" uuid="6bcebd0c-6e94-48cf-b523-bac6956fd9c5"/>
+				<textElement>
+					<font fontName="AKbalthom Freehand" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="h:mm:ss a">
+				<reportElement x="380" y="30" width="100" height="30" uuid="04f1c051-e366-4d8f-a7f7-381908707a4b"/>
+				<textElement>
+					<font fontName="Copperplate Gothic Light" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="30" uuid="a4683699-02eb-4be1-85de-7fbad9ac4335">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="69e694d7-8e41-42b4-8760-d61ba20d036c"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="30" uuid="4c810f02-493b-4a87-88a1-8f6be3024435">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5d978df9-5a1c-4c5e-aa5c-515ab0723890"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="30" uuid="cd2636da-31f7-487f-bb82-80228a22d3c0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="474b23d3-3578-40dc-bd72-9db612837936"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="30" uuid="e2b377e0-a9c3-4fdd-be28-9497026392bf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="22f41ab9-41e3-4d4a-8972-d5ae5a64acfa"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="30" uuid="e8741e75-8a5f-441a-87a5-9118b9e70fbf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e3d5596e-8da8-451c-b66e-9faeecb12311"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="111" height="30" uuid="0be489a5-1805-4211-94e0-ae45bcf0954c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="69e694d7-8e41-42b4-8760-d61ba20d036c"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="30" uuid="f3e07612-c84e-434f-8f5a-74684beb208d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5d978df9-5a1c-4c5e-aa5c-515ab0723890"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="30" uuid="735a87f7-7bd5-41f8-87bb-16c228625efd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="474b23d3-3578-40dc-bd72-9db612837936"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="30" uuid="26c157aa-c996-4611-ad0e-179d145965b8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="22f41ab9-41e3-4d4a-8972-d5ae5a64acfa"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="111" height="30" uuid="857b1e45-9c04-4a58-8326-61ecd49270dd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e3d5596e-8da8-451c-b66e-9faeecb12311"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="262" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="30" uuid="129512b9-b8af-4ffa-a803-45cddd69e73f"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Total : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="110" width="100" height="30" uuid="29fd6741-24bf-4d2b-b741-53373bc88023"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Payment : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="100" height="30" uuid="5b276883-880f-4504-a230-610ce914a047"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Discount : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="20" width="100" height="30" uuid="26de0a4e-89cd-416d-8bf2-83430eba9ef1"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="60" width="100" height="30" uuid="61cf9860-10df-45dd-a7c6-c272139d2c20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{discount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="100" width="100" height="30" uuid="3e7c959e-e3e5-47cf-b13e-cad26735c9ba"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{payment}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="140" y="150" width="240" height="40" uuid="1843022c-ade5-4197-88e3-7b82859b1037"/>
+				<textElement>
+					<font fontName="SansSerif" size="18"/>
+				</textElement>
+				<text><![CDATA[Username : StarResturant]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="190" width="215" height="40" uuid="d1e2cb28-34db-420c-9d15-4f54ee1d3a96"/>
+				<textElement>
+					<font fontName="SansSerif" size="18"/>
+				</textElement>
+				<text><![CDATA[Password : Star@123]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
